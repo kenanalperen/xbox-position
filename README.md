@@ -6,6 +6,44 @@
 
 # Geting input from xbox
 
+go to workspace and install joy
+```bash
+cd ~/ros2_ws/
+sudo apt install ros-foxy-joy
+```
+
+Source the ws
+```bash
+colcon build
+source install/setup.bash
+```
+
+run the joy node
+```bash
+ros2 run joy joy_node
+```
+check the topics and echo the positions using
+
+```bash
+ros2 topic echo /joy
+```
+information about the message
+```bash
+ros2 topic info /joy
+Type: sensor_msgs/msg/Joy
+ros2 interface show sensor_msgs/msg/Joy
+# Reports the state of a joystick's axes and buttons.
+
+# The timestamp is the time at which data is received from the joystick.
+std_msgs/Header header
+
+# The axes measurements from a joystick.
+float32[] axes
+
+# The buttons measurements from a joystick.
+int32[] buttons
+```
+
 # Sending position to the arm
 MOCA arm takes input from ROS1 by following topics
 
