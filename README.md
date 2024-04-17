@@ -68,7 +68,7 @@ bridge ros1-ros2
 ```bash
 noetic
 foxy
-ros2 run ros1_bridge dynamic_bridge  --bridge-all-topics
+ros2 run ros1_bridge dynamic_bridge --bridge-all-topics
 ```
 
 echo in ros1 environment
